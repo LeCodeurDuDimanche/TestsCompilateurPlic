@@ -1,0 +1,8 @@
+
+programme ProgrammeQuatre {
+	tableau [ 4 ] b ;
+
+	b [ 2 ] := b [ 12 ] ;	
+}
+
+// ERREUR: erreur de débordement

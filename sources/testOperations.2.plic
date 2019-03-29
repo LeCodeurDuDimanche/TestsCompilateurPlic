@@ -1,0 +1,30 @@
+programme testAddition {
+    entier a ;
+    entier b ;
+    entier c ;
+    tableau [ 5 ] tab ;
+
+    a := 1  * 1 ; //1
+    b := a + 2 ; //3
+    tab [ 0 ] := b - 1 ; // 2
+    tab [ a ] := a + b ; // 4
+    tab [ 2 ] := 5 + 6 ; // 11
+    tab [ 3 ] := - 2 ; //-2
+    tab [ 4 ] := 2 + ( 4 - ( a * 2 ) ) ; //4
+
+    ecrire a ;
+    ecrire b ;
+    ecrire tab [ 0 ] ;
+    ecrire tab [ 1 ] ;
+    ecrire tab [ 2 ] ;
+    ecrire tab [ 3 ] ;
+    ecrire tab [ 4 ] ;
+
+}
+//1
+//3
+//2
+//4
+//11
+//-2
+//4

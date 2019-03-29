@@ -1,0 +1,14 @@
+programme testAddition {
+    entier a ;
+    entier b ;
+    entier c ;
+
+    a := 1 ;
+    b := 2 ;
+    c := a - b - 2 ;
+
+    ecrire a ; //1
+    ecrire b ; //2
+    ecrire c ; //-1
+
+}

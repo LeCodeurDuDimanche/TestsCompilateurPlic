@@ -1,0 +1,10 @@
+
+programme ProgrammeQuatre {
+	tableau [ 4 ] b ;
+	
+	b [ 3 ] := b ;
+
+	
+}
+
+// b doit être de type entier

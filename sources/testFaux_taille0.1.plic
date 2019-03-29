@@ -1,0 +1,11 @@
+//Programme de test en PLIC v0
+programme testun {
+
+tableau [ 0 ] tb ; //Devrait etre constante >0
+	entier a ;
+	
+	a := 1 ;
+	ecrire a ;	
+
+}
+//Fin du programme

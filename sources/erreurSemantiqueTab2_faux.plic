@@ -1,0 +1,6 @@
+
+programme ProgrammeQuatre {
+	tableau [ 4 ] b ;
+
+	b [ 2 ] := b ;	
+}

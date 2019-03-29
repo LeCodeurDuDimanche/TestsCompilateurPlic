@@ -1,0 +1,15 @@
+// Programme PLIC2
+// On teste les commentaires
+programme PLIC {
+
+	// Declaration
+	entier a ;
+	%
+	// Affectations
+	a := 34 ; // On affecte 34 a A
+	
+	// Ecrire
+	ecrire a ;
+	// On vient d'écrire a
+}
+// Fin du fichier

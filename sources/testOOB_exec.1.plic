@@ -1,0 +1,13 @@
+//Programme de test en PLIC v0
+programme testOOB {
+	entier a ;
+	tableau [ 3 ] tab ;
+
+
+	a := 3 ;
+
+	tab [ a ] := a ;
+
+	ecrire a ;
+}
+//ERREUR

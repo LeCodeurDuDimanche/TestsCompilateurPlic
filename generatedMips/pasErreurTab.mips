@@ -1,0 +1,115 @@
+.data
+oobMessageStart: .asciiz "ERREUR: Indice en dehors des limites du tableau : indice = "
+oobMessageEnd: .asciiz "\n"
+stringVrai: .asciiz "1"
+stringFaux: .asciiz "0"
+aLaLigne: .asciiz ", à la ligne "
+
+.text
+main:
+#Programme ppoott
+
+#Declarations
+move $s7, $sp
+add $sp, $s7, -16
+
+#Instructions
+#Sauvegarde de ligne
+li $s6, 5
+
+#Affectation : Var(t)[Num(1)] = Num(200)
+#Load Num(200)
+li $v0, 200
+#Sauvegarde du tableau t [ Num(1) ] 
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+#Load Num(1)
+li $v0, 1
+#Check indice
+blt $v0, 0, oob
+bge $v0, 3, oob
+
+li $s1, 0
+add $s1, $s1, $s7 
+li $v1, -4
+mult $v0, $v1
+mflo $v0
+add $s1, $s1, $v0
+#On depile
+add $sp, $sp, 4
+lw $v0, ($sp)
+
+sw $v0, ($s1)
+
+#Sauvegarde de ligne
+li $s6, 7
+
+#Affectation : Var(x) = Var(t)[Num(1)]
+#Acces au tableau t [ Num(1) ] 
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+#Load Num(1)
+li $v0, 1
+#Check indice
+blt $v0, 0, oob
+bge $v0, 3, oob
+
+li $s1, 0
+add $s1, $s1, $s7 
+li $v1, -4
+mult $v0, $v1
+mflo $v0
+add $s1, $s1, $v0
+#On depile
+add $sp, $sp, 4
+lw $v0, ($sp)
+
+lw $v0, ($s1)
+#Store Var(x)
+sw $v0, -12($s7)
+
+#Sauvegarde de ligne
+li $s6, 8
+
+#Ecrire : Var(x)
+#Load Var(x)
+lw $v0, -12($s7)
+move $a0, $v0
+li $v0, 1
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+
+
+#Fin d'execution 
+end:
+li $v0, 10
+syscall
+
+#Exceptions
+oob:
+move $s1, $v0
+la $a0, oobMessageStart
+li $v0, 4
+syscall
+move $a0, $s1
+li $v0, 1
+syscall
+la $a0, aLaLigne
+li $v0, 4
+syscall
+move $a0, $s6
+li $v0, 1
+syscall
+la $a0, oobMessageEnd
+li $v0, 4
+syscall
+b end

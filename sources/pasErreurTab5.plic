@@ -1,0 +1,21 @@
+programme ppoott {
+	tableau [ 3 ] t ;
+	tableau [ 6 ] v ;
+	entier x ;
+	
+	t [ 1 ] := 4 ;
+	
+	x := t [ 1 ] ;
+	ecrire x ;
+	
+	
+	v [ t [ 1 ] ] := 2 ;
+	t [ v [ t [ 1 ] ] ] := 222 ;
+	
+	x := t [ 2 ] ;
+	ecrire x ;
+	
+} 
+
+// 4
+// 222

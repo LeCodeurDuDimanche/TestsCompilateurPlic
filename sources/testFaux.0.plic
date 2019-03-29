@@ -1,0 +1,8 @@
+//Programme PLIC v0 avec des erreurs de syntaxe
+programme Programme1 { //Entier dans un identifiant
+	entier a; entier b; // Pas d'espace entre deux unites lexicales
+	
+	yeyr ; //Instruction incorrecte
+	
+	ecrire 1 ; //Devrait etre un idf
+}

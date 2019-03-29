@@ -1,0 +1,10 @@
+
+programme ProgrammeQuatre {
+	entier a ; 
+	tableau b [ 5 ] ;
+	
+	
+	a := 3 ;
+	
+	
+}

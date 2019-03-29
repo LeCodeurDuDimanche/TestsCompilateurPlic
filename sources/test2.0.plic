@@ -1,0 +1,20 @@
+//Programme de test en PLIC v0
+programme TestDeux {
+	//entier a;
+	entier abC ;
+	entier ab ;
+	entier c ;
+
+	abC := 2 ;
+	ab := 4 ;
+	ab := 6 ;
+	abC := 6 ;
+
+	ecrire abC ;
+	ecrire ab ;
+	ecrire c ;
+}
+
+//6
+//6
+//0

@@ -1,0 +1,12 @@
+programme ggsdyg {
+	entier a ;
+	
+	a := 3 ;
+	
+	ecrire a ;
+
+	54 := 32 ;
+
+} // siefh
+// zurhf
+// uhrg

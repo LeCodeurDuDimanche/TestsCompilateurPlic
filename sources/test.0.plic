@@ -1,0 +1,14 @@
+//Programme de test en PLIC v0
+programme testun {
+	entier a ; entier b ;
+	//Instructions
+	a := 1 ; //Affectations
+	b := 5 ; //Affectations
+
+	ecrire b ;
+	ecrire a ;
+        //ecrire c ;
+       }
+
+//5
+//1

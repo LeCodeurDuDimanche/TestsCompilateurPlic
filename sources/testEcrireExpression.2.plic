@@ -1,0 +1,43 @@
+programme testAddition {
+    entier a ;
+    entier b ;
+
+    a := 2 ;
+    b := 3 ;
+
+
+    ecrire 2 + 4 ; // 6
+    ecrire 2 > 4 ; // faux
+    ecrire ( b >= 3 ) ; //vrai
+    ecrire ( b > 3 ) ; //faux
+    ecrire ( b < 3 ) ; //faux
+    ecrire ( b <= 3 ) ; //vrai
+    ecrire ( b < a ) ; //faux
+    ecrire ( a < b ) ; //vrai
+    ecrire ( b > a ) ; //vrai
+    ecrire ( b >= a ) ; //vrai
+    ecrire b # a ; //vrai
+    ecrire b = 3 ; //vrai
+    ecrire ( b > 5 ) ou ( a < 4 ) ; //vrai
+    ecrire ( b < 5 ) et ( a < 4 ) ; //vrai
+    ecrire ( b > 5 ) et ( a > 4 ) ; //faux
+    ecrire 2 * ( b + ( a + 5 ) ) ; // 20
+
+}
+
+//6
+//0
+//1
+//0
+//0
+//1
+//0
+//1
+//1
+//1
+//1
+//1
+//1
+//1
+//0
+//20

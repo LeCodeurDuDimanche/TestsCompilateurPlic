@@ -1,0 +1,28 @@
+programme cerf {
+	entier a ;
+	entier cerf ;
+	entier cc ;
+	tableau [ 5 ] ppo ;
+	entier azert ;
+
+
+	cerf := 43456 ;
+	a := 16 ;
+
+	a := 17 ;
+	ecrire cerf ;
+	cerf := 66 ;
+
+	ecrire cerf ;
+	ecrire a ;
+
+	azert := cerf ;
+	ecrire azert ;
+
+
+}
+
+// 43456
+// 66
+// 17
+// 66

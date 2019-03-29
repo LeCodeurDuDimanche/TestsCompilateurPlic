@@ -1,0 +1,12 @@
+programme ppoott {
+	tableau [ 3 ] t ;
+	entier x ;
+
+	t [ 1 ] := 200 ;
+
+	x := t [ 1 ] ;
+	ecrire x ;
+
+}
+
+// 200

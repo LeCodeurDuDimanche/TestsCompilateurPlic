@@ -1,0 +1,9 @@
+//Rien
+programme ProgrammeQuatre { //Tjr rien
+	entier a ;
+	a := 3 ; // RAS
+	a := 5 ;
+	
+	ecrire b ;
+} // RAS
+//E

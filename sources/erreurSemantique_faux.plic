@@ -1,0 +1,11 @@
+
+programme ProgrammeQuatre {
+	entier f ; 
+	tableau [ 4 ] b ;
+	
+	f [ 2 ] := 12 ;
+
+	
+}
+
+// f doit être de type tableau

@@ -1,0 +1,14 @@
+programme ppoott {
+	entier a ; 
+	
+	a := 4 ;
+	a := 16 ;
+	
+	ecrire a ;
+	ecrire a ;
+	
+	a := 4 ;
+} 
+
+// 16
+// 16

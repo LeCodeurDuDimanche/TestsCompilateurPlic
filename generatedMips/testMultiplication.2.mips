@@ -1,0 +1,148 @@
+.data
+oobMessageStart: .asciiz "ERREUR: Indice en dehors des limites du tableau : indice = "
+oobMessageEnd: .asciiz "\n"
+stringVrai: .asciiz "1"
+stringFaux: .asciiz "0"
+aLaLigne: .asciiz ", à la ligne "
+
+.text
+main:
+#Programme testAddition
+
+#Declarations
+move $s7, $sp
+add $sp, $s7, -12
+
+#Instructions
+#Sauvegarde de ligne
+li $s6, 6
+
+#Affectation : Var(a) = Num(1)
+#Load Num(1)
+li $v0, 1
+#Store Var(a)
+sw $v0, 0($s7)
+
+#Sauvegarde de ligne
+li $s6, 7
+
+#Affectation : Var(b) = Num(1)*Num(2)
+#Num(1)*Num(2)
+#Load Num(1)
+li $v0, 1
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(2)
+li $v0, 2
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+mult $v0, $s5
+mflo $v0
+
+
+#Store Var(b)
+sw $v0, -4($s7)
+
+#Sauvegarde de ligne
+li $s6, 8
+
+#Affectation : Var(c) = Num(3)*Var(b)
+#Num(3)*Var(b)
+#Load Num(3)
+li $v0, 3
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Var(b)
+lw $v0, -4($s7)
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+mult $v0, $s5
+mflo $v0
+
+
+#Store Var(c)
+sw $v0, -8($s7)
+
+#Sauvegarde de ligne
+li $s6, 10
+
+#Ecrire : Var(a)
+#Load Var(a)
+lw $v0, 0($s7)
+move $a0, $v0
+li $v0, 1
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 11
+
+#Ecrire : Var(b)
+#Load Var(b)
+lw $v0, -4($s7)
+move $a0, $v0
+li $v0, 1
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 12
+
+#Ecrire : Var(c)
+#Load Var(c)
+lw $v0, -8($s7)
+move $a0, $v0
+li $v0, 1
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+
+
+#Fin d'execution 
+end:
+li $v0, 10
+syscall
+
+#Exceptions
+oob:
+move $s1, $v0
+la $a0, oobMessageStart
+li $v0, 4
+syscall
+move $a0, $s1
+li $v0, 1
+syscall
+la $a0, aLaLigne
+li $v0, 4
+syscall
+move $a0, $s6
+li $v0, 1
+syscall
+la $a0, oobMessageEnd
+li $v0, 4
+syscall
+b end

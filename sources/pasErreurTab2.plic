@@ -1,0 +1,16 @@
+programme ppoott {
+	tableau [ 3 ] t ;
+	tableau [ 6 ] v ;
+	entier x ;
+	
+	t [ 1 ] := 200 ;
+	v [ 2 ] := 100 ;
+	
+	t [ 2 ] := v [ 2 ] ;
+	
+	x := t [ 2 ] ;
+	ecrire x ;
+	
+} 
+
+// 100

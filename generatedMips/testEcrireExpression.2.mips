@@ -1,0 +1,939 @@
+.data
+oobMessageStart: .asciiz "ERREUR: Indice en dehors des limites du tableau : indice = "
+oobMessageEnd: .asciiz "\n"
+stringVrai: .asciiz "1"
+stringFaux: .asciiz "0"
+aLaLigne: .asciiz ", à la ligne "
+
+.text
+main:
+#Programme testAddition
+
+#Declarations
+move $s7, $sp
+add $sp, $s7, -8
+
+#Instructions
+#Sauvegarde de ligne
+li $s6, 5
+
+#Affectation : Var(a) = Num(2)
+#Load Num(2)
+li $v0, 2
+#Store Var(a)
+sw $v0, 0($s7)
+
+#Sauvegarde de ligne
+li $s6, 6
+
+#Affectation : Var(b) = Num(3)
+#Load Num(3)
+li $v0, 3
+#Store Var(b)
+sw $v0, -4($s7)
+
+#Sauvegarde de ligne
+li $s6, 9
+
+#Ecrire : Num(2)+Num(4)
+#Num(2)+Num(4)
+#Load Num(2)
+li $v0, 2
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(4)
+li $v0, 4
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+add $v0, $v0, $s5
+
+
+move $a0, $v0
+li $v0, 1
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 10
+
+#Ecrire : Num(2)>Num(4)
+#Num(2)>Num(4)
+#Load Num(2)
+li $v0, 2
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(4)
+li $v0, 4
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bgt $s5, $v0, vrai0 
+b faux0
+vrai0:
+	li $v0, 1
+	b finComp0
+faux0:
+	li $v0, 0
+	b finComp0
+finComp0:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux0
+la $a0, stringVrai
+b ecrireFin0
+	ecrireFaux0:
+	la $a0, stringFaux
+ecrireFin0:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 11
+
+#Ecrire : Var(b)>=Num(3)
+#Var(b)>=Num(3)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(3)
+li $v0, 3
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bge $s5, $v0, vrai1 
+b faux1
+vrai1:
+	li $v0, 1
+	b finComp1
+faux1:
+	li $v0, 0
+	b finComp1
+finComp1:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux1
+la $a0, stringVrai
+b ecrireFin1
+	ecrireFaux1:
+	la $a0, stringFaux
+ecrireFin1:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 12
+
+#Ecrire : Var(b)>Num(3)
+#Var(b)>Num(3)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(3)
+li $v0, 3
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bgt $s5, $v0, vrai2 
+b faux2
+vrai2:
+	li $v0, 1
+	b finComp2
+faux2:
+	li $v0, 0
+	b finComp2
+finComp2:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux2
+la $a0, stringVrai
+b ecrireFin2
+	ecrireFaux2:
+	la $a0, stringFaux
+ecrireFin2:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 13
+
+#Ecrire : Var(b)<Num(3)
+#Var(b)<Num(3)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(3)
+li $v0, 3
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+blt $s5, $v0, vrai3 
+b faux3
+vrai3:
+	li $v0, 1
+	b finComp3
+faux3:
+	li $v0, 0
+	b finComp3
+finComp3:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux3
+la $a0, stringVrai
+b ecrireFin3
+	ecrireFaux3:
+	la $a0, stringFaux
+ecrireFin3:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 14
+
+#Ecrire : Var(b)<=Num(3)
+#Var(b)<=Num(3)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(3)
+li $v0, 3
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+ble $s5, $v0, vrai4 
+b faux4
+vrai4:
+	li $v0, 1
+	b finComp4
+faux4:
+	li $v0, 0
+	b finComp4
+finComp4:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux4
+la $a0, stringVrai
+b ecrireFin4
+	ecrireFaux4:
+	la $a0, stringFaux
+ecrireFin4:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 15
+
+#Ecrire : Var(b)<Var(a)
+#Var(b)<Var(a)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Var(a)
+lw $v0, 0($s7)
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+blt $s5, $v0, vrai5 
+b faux5
+vrai5:
+	li $v0, 1
+	b finComp5
+faux5:
+	li $v0, 0
+	b finComp5
+finComp5:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux5
+la $a0, stringVrai
+b ecrireFin5
+	ecrireFaux5:
+	la $a0, stringFaux
+ecrireFin5:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 16
+
+#Ecrire : Var(a)<Var(b)
+#Var(a)<Var(b)
+#Load Var(a)
+lw $v0, 0($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Var(b)
+lw $v0, -4($s7)
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+blt $s5, $v0, vrai6 
+b faux6
+vrai6:
+	li $v0, 1
+	b finComp6
+faux6:
+	li $v0, 0
+	b finComp6
+finComp6:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux6
+la $a0, stringVrai
+b ecrireFin6
+	ecrireFaux6:
+	la $a0, stringFaux
+ecrireFin6:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 17
+
+#Ecrire : Var(b)>Var(a)
+#Var(b)>Var(a)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Var(a)
+lw $v0, 0($s7)
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bgt $s5, $v0, vrai7 
+b faux7
+vrai7:
+	li $v0, 1
+	b finComp7
+faux7:
+	li $v0, 0
+	b finComp7
+finComp7:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux7
+la $a0, stringVrai
+b ecrireFin7
+	ecrireFaux7:
+	la $a0, stringFaux
+ecrireFin7:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 18
+
+#Ecrire : Var(b)>=Var(a)
+#Var(b)>=Var(a)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Var(a)
+lw $v0, 0($s7)
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bge $s5, $v0, vrai8 
+b faux8
+vrai8:
+	li $v0, 1
+	b finComp8
+faux8:
+	li $v0, 0
+	b finComp8
+finComp8:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux8
+la $a0, stringVrai
+b ecrireFin8
+	ecrireFaux8:
+	la $a0, stringFaux
+ecrireFin8:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 19
+
+#Ecrire : Var(b)!=Var(a)
+#Var(b)!=Var(a)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Var(a)
+lw $v0, 0($s7)
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bne $s5, $v0, vrai9 
+b faux9
+vrai9:
+	li $v0, 1
+	b finComp9
+faux9:
+	li $v0, 0
+	b finComp9
+finComp9:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux9
+la $a0, stringVrai
+b ecrireFin9
+	ecrireFaux9:
+	la $a0, stringFaux
+ecrireFin9:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 20
+
+#Ecrire : Var(b)=Num(3)
+#Var(b)=Num(3)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(3)
+li $v0, 3
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+beq $s5, $v0, vrai10 
+b faux10
+vrai10:
+	li $v0, 1
+	b finComp10
+faux10:
+	li $v0, 0
+	b finComp10
+finComp10:
+
+
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux10
+la $a0, stringVrai
+b ecrireFin10
+	ecrireFaux10:
+	la $a0, stringFaux
+ecrireFin10:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 21
+
+#Ecrire : Var(b)>Num(5)ouVar(a)<Num(4)
+#Var(b)>Num(5)ouVar(a)<Num(4)
+#Var(b)>Num(5)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(5)
+li $v0, 5
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bgt $s5, $v0, vrai11 
+b faux11
+vrai11:
+	li $v0, 1
+	b finComp11
+faux11:
+	li $v0, 0
+	b finComp11
+finComp11:
+
+
+
+
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Var(a)<Num(4)
+#Load Var(a)
+lw $v0, 0($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(4)
+li $v0, 4
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+blt $s5, $v0, vrai12 
+b faux12
+vrai12:
+	li $v0, 1
+	b finComp12
+faux12:
+	li $v0, 0
+	b finComp12
+finComp12:
+
+
+
+
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+or $v0, $v0, $s5
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux11
+la $a0, stringVrai
+b ecrireFin11
+	ecrireFaux11:
+	la $a0, stringFaux
+ecrireFin11:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 22
+
+#Ecrire : Var(b)<Num(5) et Var(a)<Num(4)
+#Var(b)<Num(5) et Var(a)<Num(4)
+#Var(b)<Num(5)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(5)
+li $v0, 5
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+blt $s5, $v0, vrai13 
+b faux13
+vrai13:
+	li $v0, 1
+	b finComp13
+faux13:
+	li $v0, 0
+	b finComp13
+finComp13:
+
+
+
+
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Var(a)<Num(4)
+#Load Var(a)
+lw $v0, 0($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(4)
+li $v0, 4
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+blt $s5, $v0, vrai14 
+b faux14
+vrai14:
+	li $v0, 1
+	b finComp14
+faux14:
+	li $v0, 0
+	b finComp14
+finComp14:
+
+
+
+
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+and $v0, $v0, $s5
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux12
+la $a0, stringVrai
+b ecrireFin12
+	ecrireFaux12:
+	la $a0, stringFaux
+ecrireFin12:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 23
+
+#Ecrire : Var(b)>Num(5) et Var(a)>Num(4)
+#Var(b)>Num(5) et Var(a)>Num(4)
+#Var(b)>Num(5)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(5)
+li $v0, 5
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bgt $s5, $v0, vrai15 
+b faux15
+vrai15:
+	li $v0, 1
+	b finComp15
+faux15:
+	li $v0, 0
+	b finComp15
+finComp15:
+
+
+
+
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Var(a)>Num(4)
+#Load Var(a)
+lw $v0, 0($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(4)
+li $v0, 4
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+bgt $s5, $v0, vrai16 
+b faux16
+vrai16:
+	li $v0, 1
+	b finComp16
+faux16:
+	li $v0, 0
+	b finComp16
+finComp16:
+
+
+
+
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+and $v0, $v0, $s5
+
+
+li $a0, 1
+bne $v0, $a0, ecrireFaux13
+la $a0, stringVrai
+b ecrireFin13
+	ecrireFaux13:
+	la $a0, stringFaux
+ecrireFin13:
+	li $v0, 4
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+#Sauvegarde de ligne
+li $s6, 24
+
+#Ecrire : Num(2)*Var(b)+Var(a)+Num(5)
+#Num(2)*Var(b)+Var(a)+Num(5)
+#Load Num(2)
+li $v0, 2
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Var(b)+Var(a)+Num(5)
+#Load Var(b)
+lw $v0, -4($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Var(a)+Num(5)
+#Load Var(a)
+lw $v0, 0($s7)
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+
+#Load Num(5)
+li $v0, 5
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+add $v0, $v0, $s5
+
+
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+add $v0, $v0, $s5
+
+
+#On depile
+add $sp, $sp, 4
+lw $s5, ($sp)
+
+
+mult $v0, $s5
+mflo $v0
+
+
+move $a0, $v0
+li $v0, 1
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+
+
+#Fin d'execution 
+end:
+li $v0, 10
+syscall
+
+#Exceptions
+oob:
+move $s1, $v0
+la $a0, oobMessageStart
+li $v0, 4
+syscall
+move $a0, $s1
+li $v0, 1
+syscall
+la $a0, aLaLigne
+li $v0, 4
+syscall
+move $a0, $s6
+li $v0, 1
+syscall
+la $a0, oobMessageEnd
+li $v0, 4
+syscall
+b end

@@ -1,0 +1,17 @@
+//Test d'enchainement des commentaires
+//Test2
+programme ok { //Commentaire après la ligne
+entier a ; //Statement au debut de ligne après un com
+//Caractères spéciaux dans comms %*$ùé$"ùùé"ùé^&é"é&*-*/+
+entier b ;
+// Espace après //
+// // dans //
+a := 1 ; // Comentaire, ignore : a := 2 ;
+a := 2 ; ecrire a ;
+//Commentaire vide :
+//
+ecrire a ;
+}
+
+//2
+//2

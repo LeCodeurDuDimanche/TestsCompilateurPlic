@@ -1,0 +1,13 @@
+//Programme avec des erreurs semantiques
+programme fauxTrois {
+	entier a ;
+	entier a ; //Redefinition
+	entier c ;
+
+	a := 1 ;
+	b := 3 ; //B non defini
+	
+	ecrire a ;
+	ecrire c ;
+	a := 1 ;
+}

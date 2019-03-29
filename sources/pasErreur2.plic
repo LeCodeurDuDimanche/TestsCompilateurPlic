@@ -1,0 +1,13 @@
+programme zzeerr {
+	entier a ;
+	
+	a := 4 ;
+	
+	//a := 2 ;
+	
+	ecrire a ;
+	ecrire a ;
+} 
+
+// 4
+// 4

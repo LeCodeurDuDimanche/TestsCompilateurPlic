@@ -1,0 +1,95 @@
+.data
+oobMessageStart: .asciiz "ERREUR: Indice en dehors des limites du tableau : indice = "
+oobMessageEnd: .asciiz "\n"
+stringVrai: .asciiz "1"
+stringFaux: .asciiz "0"
+aLaLigne: .asciiz ", à la ligne "
+
+.text
+main:
+#Programme testOOB
+
+#Declarations
+move $s7, $sp
+add $sp, $s7, -16
+
+#Instructions
+#Sauvegarde de ligne
+li $s6, 7
+
+#Affectation : Var(a) = Num(3)
+#Load Num(3)
+li $v0, 3
+#Store Var(a)
+sw $v0, 0($s7)
+
+#Sauvegarde de ligne
+li $s6, 9
+
+#Affectation : Var(tab)[Var(a)] = Var(a)
+#Load Var(a)
+lw $v0, 0($s7)
+#Sauvegarde du tableau tab [ Var(a) ] 
+#On empile
+sw $v0, ($sp)
+sub $sp, $sp, 4
+
+#Load Var(a)
+lw $v0, 0($s7)
+#Check indice
+blt $v0, 0, oob
+bge $v0, 3, oob
+
+li $s1, -4
+add $s1, $s1, $s7 
+li $v1, -4
+mult $v0, $v1
+mflo $v0
+add $s1, $s1, $v0
+#On depile
+add $sp, $sp, 4
+lw $v0, ($sp)
+
+sw $v0, ($s1)
+
+#Sauvegarde de ligne
+li $s6, 11
+
+#Ecrire : Var(a)
+#Load Var(a)
+lw $v0, 0($s7)
+move $a0, $v0
+li $v0, 1
+
+syscall
+#Retour à la ligne
+li $v0, 11
+li $a0, '\n'
+syscall
+
+
+
+#Fin d'execution 
+end:
+li $v0, 10
+syscall
+
+#Exceptions
+oob:
+move $s1, $v0
+la $a0, oobMessageStart
+li $v0, 4
+syscall
+move $a0, $s1
+li $v0, 1
+syscall
+la $a0, aLaLigne
+li $v0, 4
+syscall
+move $a0, $s6
+li $v0, 1
+syscall
+la $a0, oobMessageEnd
+li $v0, 4
+syscall
+b end

@@ -1,0 +1,12 @@
+//Programme avec des mots reserves
+programme reserve {
+	entier entier ;
+	entier tableau ;
+	entier programme ;
+	
+	repeter := 12 ;
+	//finsi := si + alors;
+	
+	//si ( sinon ) alors repeter finsi
+	
+}
