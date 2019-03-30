@@ -1,0 +1,18 @@
+
+//programme en PLIC0
+
+programme progPlicDEUX {
+    entier i ;
+    ecrire j ;
+    entier k ;
+
+    i := 1 ;  //coucou
+    i := 2 ;  //coucou
+    i := 3 ;  //soleil
+
+    ecrire i ;
+    entier j ;
+    ecrire k ;
+}
+
+//programme en PLIC0

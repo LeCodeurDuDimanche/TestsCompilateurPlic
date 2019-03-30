@@ -1,0 +1,4 @@
+programme plicoperateurdeux {
+    ecrire 10 = 10  ; //1
+    ecrire 10 # 10  ; //0
+}

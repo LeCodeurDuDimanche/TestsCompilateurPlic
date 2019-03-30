@@ -1,0 +1,8 @@
+
+//programme en PLIC0
+
+programme progPlic {
+    ecrire i ;
+}
+
+//programme en PLIC0

@@ -1,0 +1,10 @@
+
+//programme en PLIC0
+
+programme {
+    entier i ;
+    i := 0 ;  //coucou
+    ecrire i ;
+}
+
+//programme en PLIC0

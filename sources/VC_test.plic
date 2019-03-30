@@ -1,0 +1,23 @@
+//Programme de test en PLIC v0
+programme TestSept {
+    entier i ;
+    entier j ;
+    entier a ;
+	tableau [ 5 ] k ;
+	j := 2 ;
+	k [ j ] := 3 ;
+	k [ i ] := 4 ;
+	k [ k [ i ] ] := 8 ;
+	k [ k [ j ] ] := k [ k [ i ] ] ;
+	i := 0 ;
+	k [ i ] := k [ j ] ;
+	a := k [ i ] ;
+	ecrire a ;
+	a := k [ j ] ;
+	ecrire a ;
+	a := k [ k [ j ] ] ;
+	ecrire a ;
+
+}
+
+//Fin du programme

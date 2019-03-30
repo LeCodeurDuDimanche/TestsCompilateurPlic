@@ -1,0 +1,31 @@
+//Programme de test en PLIC v0
+programme testun {
+	entier a ; entier b ;
+	entier c ; entier d ;
+	tableau tab [ 5 ] ;
+	tableau tb [ 6 ] ;
+	
+	//Instructions
+	a := 1 ; //Affectations
+	b := 5 ; //Affectations
+	
+	c := a ;
+	a := b ;
+	
+	tab [ 0 ] := a ; 
+	tb [ 1 ] := tab [ 0 ] ;
+	
+	c := tab [ c ] ;
+	b := 1 ;
+	tab [ b ] := tb [ b ] ;
+	
+	ecrire b ;
+	ecrire a ;
+	
+	d := tab [ 0 ] ;
+    ecrire d ;
+    d := tb [ b ] ;
+    ecrire d ;
+
+}
+//Fin du programme

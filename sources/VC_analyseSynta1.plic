@@ -1,0 +1,24 @@
+//coucou
+//coucou
+//coucou
+//coucou
+//coucou
+
+programme lel {
+    entier a ;
+    tableau tab [ 4 ] ;
+
+    a := 1 ;
+
+    tab [ 2 ] := 3 ;
+    tab [ tab [ tab [ tab [ tab [ 1 ] ] ] ] ] := 5 ;
+    a := tab [ tab [ 1 ] ] ;
+    a := tab [ a ] ;
+
+
+}
+
+//coucou
+//coucou
+//coucou
+//coucou
