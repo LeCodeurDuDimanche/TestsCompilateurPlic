@@ -6,7 +6,7 @@
 
 programme lel {
     entier a ;
-    tableau tab [ 4 ] ;
+    tableau [ 4 ] tab ;
 
     a := 1 ;
 

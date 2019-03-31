@@ -3,7 +3,6 @@
 
 programme progPlicDEUX {
     entier i ;
-    ecrire j ;
     entier k ;
 
     i := 1 ;  //coucou
