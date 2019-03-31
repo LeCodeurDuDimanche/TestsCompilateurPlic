@@ -1,0 +1,11 @@
+programme progPlic {
+	tableau [ 10 ] tab ;
+
+	tab [ 0 ] := 8 ;
+	tab [ 1 ] := 9 ;
+	tab [ 2 ] := 1 ;
+	tab [ 3 ] := tab [ tab [ 2 ] ] + tab [ 0 ] ; // 17
+	tab [ tab [ 1 ] ] := tab [ 0 ] + 70 ; // 78
+	ecrire tab [ tab [ 1 ] ] + 70 ; // 148
+	ecrire tab [ tab [ 1 ] ] + tab [ tab [ 1 ] ] ; // 156
+}
