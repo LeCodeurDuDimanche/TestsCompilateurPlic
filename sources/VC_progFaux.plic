@@ -1,9 +1,0 @@
-
-//programme en PLIC0
-
-programme progFaux {
-    i := 0 ;  //coucou
-    ecrire i ;
-}
-
-//programme en PLIC0
