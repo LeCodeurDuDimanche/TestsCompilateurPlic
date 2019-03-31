@@ -1,10 +1,12 @@
 programme progPlic {
-	entier i ; 
+	entier i ;
 	entier j ;
-	tableau [ 5 ] tab ; 
-	i := 4 ; 
+	tableau [ 5 ] tab ;
+	i := 4 ;
 	tab [ i ] := i ;
 	j := tab [ i ] ;
 	ecrire i ; // 4
 	ecrire j ; // 4
 }
+
+// 4 4

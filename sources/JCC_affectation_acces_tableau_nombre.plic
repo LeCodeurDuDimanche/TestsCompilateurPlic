@@ -1,10 +1,10 @@
 programme progPlic {
-	entier i ; 
+	entier i ;
 	entier j ;
 	entier k ;
-	tableau [ 5 ] tab ; 
+	tableau [ 5 ] tab ;
 
-	tab [ 0 ] := 88 ; 
+	tab [ 0 ] := 88 ;
 	tab [ 1 ] := 55 ;
 	tab [ 4 ] := 77 ;
 	i := tab [ 0 ] ;
@@ -15,3 +15,5 @@ programme progPlic {
 	ecrire j ; // 55
 	ecrire k ; // 77
 }
+
+//88 55 77
