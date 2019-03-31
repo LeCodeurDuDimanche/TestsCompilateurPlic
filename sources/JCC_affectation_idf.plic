@@ -1,0 +1,13 @@
+programme progPlic {
+	entier i ; 
+	entier j ;
+
+	i := 9 ; 
+	j := i ;
+	i := j ;
+	j := j ;
+	i := i ;
+
+	ecrire i ; //9
+	ecrire j ; //9
+}
