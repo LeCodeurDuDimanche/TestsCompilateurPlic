@@ -11,14 +11,9 @@ programme lel {
     a := 1 ;
 
     tab [ 2 ] := 3 ;
-    tab [ tab [ tab [ tab [ tab [ 1 ] ] ] ] ] := 5 ;
+    tab [ tab [ tab [ tab [ tab [ 1 ] ] ] ] ] := 3 ;
     a := tab [ tab [ 1 ] ] ;
     a := tab [ a ] ;
 
 
 }
-
-//coucou
-//coucou
-//coucou
-//coucou
