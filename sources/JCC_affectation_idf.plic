@@ -1,8 +1,8 @@
 programme progPlic {
-	entier i ; 
+	entier i ;
 	entier j ;
 
-	i := 9 ; 
+	i := 9 ;
 	j := i ;
 	i := j ;
 	j := j ;
@@ -11,3 +11,4 @@ programme progPlic {
 	ecrire i ; //9
 	ecrire j ; //9
 }
+// 9 9

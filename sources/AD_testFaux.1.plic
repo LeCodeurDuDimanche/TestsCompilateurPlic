@@ -1,24 +1,24 @@
 //Programme de test en PLIC v0
 programme testun {
-	
+
 	entier a ; entier b ;
 	tableau [ 5 ] tab ;
 	tableau [ 5 ] tb ;
 	entier c [ 3 ] ; //Devrait etre tableau
 	tableau d ;
 	tableau [ 5 ] a ; //Redeclaration
-	
+
 	a := tab ; //Type mismatch
 	
 	tab := 0 ; //Type mismatch
-	
+
 	tab [ 0 ] := tab ;
-	
+
 	a [ 0 ] := a [ 1 ] ;
 	b := tab [ 6 ] ; //Out of bounds
-	
+
 	a := b [ a ] ;
-	
+
 	ecrire b ;
 	ecrire a ;
     ecrire tab ; //Type mismatch

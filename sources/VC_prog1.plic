@@ -6,5 +6,4 @@ programme progPlic {
     i := 0 ;  // coucou
     ecrire i ;
 }
-
-// programme en PLIC0
+// 0
