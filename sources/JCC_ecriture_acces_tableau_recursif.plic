@@ -1,0 +1,7 @@
+programme progPlic {
+	tableau [ 5 ] t ;
+ 	t [ 2 ] := 1 ;
+	t [ 3 ] := 4 ; 
+	t [ 4 ] := 2 ;
+	ecrire t [ t [ t [ 3 ] ] ] ;  // 1
+}

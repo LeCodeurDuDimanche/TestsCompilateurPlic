@@ -1,0 +1,5 @@
+programme progPlic {
+	entier i ;
+	i := 10 ;
+	ecrire i ; 
+}
