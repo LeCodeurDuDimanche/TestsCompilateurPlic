@@ -1,0 +1,20 @@
+programme testUnaire {
+
+    entier a ;
+    tableau [ 2 ] b ;
+
+    a := - 2 ;
+    b [ 0 - - 1 ] := 1 ;
+    b [ 1 - - - - ( 1 - 2 ) ] := - 0 ;
+
+    ecrire non a > 0 ; //1
+    ecrire - a > - 0 ; //1
+    ecrire non a > 0 ou non b [ 0 ] = 0 ; //1
+    ecrire non a = - - a ; //0
+    ecrire non - a = - 2 ; //1
+
+    ecrire non - a >= 2 ; //0
+
+}
+
+//1 1 1 0 1 0
