@@ -65,13 +65,13 @@ then
 fi
 
 i=0
-nb=$(ls $dir|wc -l) 
+nb=$(ls $dir|wc -l)
 for file in $(ls $dir)
 do
 	i=$(($i+1))
 	[ $quiet -eq 0 ] && echo -n "[ $i / $nb ]                   "
 	[ $quiet -eq 0 ] && echo -ne "\r"
-	
+
 	[ $verbose -eq 1 ] && echo "Compilation de $(basename $file)"
 	res=$($run_cmd $file|sed s/\\x00//g)
 	outFile=generatedMips/$(basename $file .plic).mips
@@ -118,7 +118,7 @@ do
 	if [ $quiet -eq 0 ]
 	then
 		[ $test -eq 0 -o $correct != PASSE ] && echo $correct $status $file
-		if [ $test -eq 0 -o $correct == ERREUR ]
+		if [ $test -eq 0 ] || [ $correct == ERREUR -a $status == INVALIDE ]
 		then
 			$run_cmd $file
 			echo
