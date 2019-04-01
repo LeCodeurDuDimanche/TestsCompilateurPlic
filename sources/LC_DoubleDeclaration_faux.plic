@@ -1,0 +1,8 @@
+//   Commentaire
+programme DoubleDeclaration {
+    entier a ;
+    entier b ;
+    //   variable deja declaree
+    entier a ;
+    ecrire a ;
+}

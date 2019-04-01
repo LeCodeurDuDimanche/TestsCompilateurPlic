@@ -1,0 +1,31 @@
+//   commentaire du debut
+programme test {
+    tableau [ 5 ] tab ;
+    entier a ;
+    entier b ;
+    tableau [ 3 ] tabDeux ;
+    
+    a := 0 ;
+    b := 2 ;
+    tab [ a ] := b ; //   tab [ 0 ] := 2 
+    tab [ 1 ] := tab [ 0 ] ; //   tab [ 1 ] := 2
+    tab [ tab [ a ] ] := 4 ; //   tab [ 2 ] := 4
+    tab [ 3 ] := tab [ tab [ 1 ] ] ; //   tab [ 3 ] := tab [ 2 ]
+    
+    tabDeux [ tab [ 0 ] ] := tab [ tab [ 1 ] ] ; //   tabDeux [ 2 ] := tab [ 2 ]
+    tabDeux [ 0 ] := tab [ 0 ] ; 
+    
+    a := tab [ 0 ] ;
+    ecrire a ;
+    a := tab [ 1 ] ;
+    ecrire a ;
+    a := tab [ 2 ] ;
+    ecrire a ;
+    a := tab [ 3 ] ;
+    ecrire a ;    
+}
+//   commentaire a la fin
+//  2
+//  2
+//  4
+//  4

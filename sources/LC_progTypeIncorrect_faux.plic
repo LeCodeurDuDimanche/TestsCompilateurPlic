@@ -1,0 +1,6 @@
+programme test {
+    entier a ;
+    //   type incorrect
+    a := 2 <= 3 ;
+    ecrire a ;
+}

@@ -1,0 +1,5 @@
+//   commentaire
+programme progDeux { 
+    entier a //   oubli de point-virgule
+	a := 2 ;
+}

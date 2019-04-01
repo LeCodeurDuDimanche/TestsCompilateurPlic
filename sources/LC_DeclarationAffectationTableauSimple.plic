@@ -1,0 +1,20 @@
+//   programme de test
+programme test {
+    tableau [ 3 ] tab ;
+    entier a ;
+    entier b ; //   RAS
+    entier c ;
+    a := 3 ;
+    
+     tab [ 0 ] := a ; //   a = 3
+     tab [ 1 ] := 2 ;
+    
+     b := tab [ 0 ] ;
+     c := tab [ 1 ] ;
+    
+     ecrire b ; //   3
+     ecrire c ; //   2
+}
+//  commentaire à la fin
+//  3
+//  2

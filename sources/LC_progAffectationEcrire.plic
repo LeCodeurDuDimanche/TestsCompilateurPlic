@@ -1,0 +1,6 @@
+programme test {
+    entier a ;
+    a := 22 ;
+    ecrire a ;
+}
+//  22

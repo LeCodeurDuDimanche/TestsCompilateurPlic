@@ -1,0 +1,13 @@
+programme test {
+    entier a ;
+    a := 2 ;
+
+    
+    //   devrait lancer une erreur 
+    programme testImbrique {
+        entier b ;
+        b := 3 ;
+        ecrire b ;
+    }
+
+}

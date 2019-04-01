@@ -1,0 +1,12 @@
+programme tableaux {
+    tableau [ 3 ] tab ;
+    entier a ;
+    entier b ;
+    
+    a := 0 ;
+    b := 1 ;
+    
+    tab [ a ] := 5 ;
+    //   c n'est pas déclaré
+    tab [ c ] := b ; 
+}

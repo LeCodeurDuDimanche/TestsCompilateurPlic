@@ -1,0 +1,4 @@
+programme CaractereInconnu {
+    entier a ; % //   ajout d'un %
+    a := 4 ;
+}

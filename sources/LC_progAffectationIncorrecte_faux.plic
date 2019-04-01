@@ -1,0 +1,5 @@
+//   Commentaire
+programme test { entier x ; //   inutile
+x = 8 ; //   ':' manquant
+}
+//   ne sert a rien

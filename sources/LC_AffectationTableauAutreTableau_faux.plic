@@ -1,0 +1,5 @@
+programme tab {
+    tableau [ 5 ] tab ;
+    //   l'expression doit etre de type entier
+    tab [ tab ] := 2 ;
+}
