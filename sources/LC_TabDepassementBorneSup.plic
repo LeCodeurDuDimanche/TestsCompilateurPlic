@@ -3,3 +3,4 @@ programme test {
 	tab [ 3 ] := 2 ;
 	tab [ 4 ] := 2 ;
 }
+//ERREUR

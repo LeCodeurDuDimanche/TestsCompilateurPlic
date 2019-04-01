@@ -2,3 +2,4 @@ programme test {
 	tableau [ 3 ] tab ;
 	tab [ - 1 ] := 2 ;
 }
+//ERREUR
