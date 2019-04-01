@@ -1,0 +1,6 @@
+programme et {
+
+	entier a ;
+	entier b ;
+	ecrire  a >= 0 et b <= 0;
+}

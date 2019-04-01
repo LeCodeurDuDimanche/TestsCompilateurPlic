@@ -4,6 +4,6 @@ programme et {
 	entier b ;
 	a := 3 ;
 	b := 2 ;
-	ecrire a >= 3 et b <= 2 ;
+	ecrire ( a >= 3 ) et ( b <= 2 ) ;
 }
 //1
