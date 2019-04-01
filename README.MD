@@ -8,7 +8,7 @@ Pour que les scripts de test marchent correctement :
 - Ajouter faux dans le nom du fichier s'il contient des erreurs de compilation
 
 - Ajouter en commentaires après le programme le résultat de l'éxécution s'il est censé
-compilé
+compiler (ou ERREUR si le programme doit planter)
 
 - Ça serait cool dans le nom ou et commentaire dans le fichier de dire pourquoi il ne
 devrait pas compiler (si c'est le cas)
