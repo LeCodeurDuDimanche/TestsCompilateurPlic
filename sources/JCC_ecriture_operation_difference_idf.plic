@@ -1,9 +1,0 @@
-programme progPlic {
-	entier i ; 
-	entier j ;
-
-	i := 9 ; 
-	j := i - 10 ; //-1
-	ecrire i - i ; //0
-	ecrire j - i ; //-10
-}

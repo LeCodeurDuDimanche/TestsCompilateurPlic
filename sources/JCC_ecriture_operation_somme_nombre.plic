@@ -1,3 +1,0 @@
-programme progPlic {
-	ecrire 110 + 44 ; //154
-}

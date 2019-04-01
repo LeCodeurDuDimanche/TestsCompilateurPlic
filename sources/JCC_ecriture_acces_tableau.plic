@@ -1,5 +1,0 @@
-programme progPlic {
-	tableau [ 5 ] t ;
-	t [ 3 ] := 5 ; 
-	ecrire t [ 3 ] ; 
-}
