@@ -1,0 +1,5 @@
+programme eofIdf {
+	entier EOF ;
+	EOF := 2 ;
+	ecrire EOF ;
+}

@@ -1,0 +1,8 @@
+programme test {
+    //   ne pas préciser le type du tableau
+    tableau entier [ 2 ] tab ;
+    entier a ;
+    a := 1 ;
+    tab [ 0 ] := a ;
+    tab [ 1 ] := 2 ; 
+}

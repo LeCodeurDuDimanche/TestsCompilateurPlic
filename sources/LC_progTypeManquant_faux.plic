@@ -1,0 +1,7 @@
+programme progTrois {
+    //   type non reconnu (faute de frappe a entier)
+    enier a ;
+    //   affectation
+    a := 2 ;
+    
+}

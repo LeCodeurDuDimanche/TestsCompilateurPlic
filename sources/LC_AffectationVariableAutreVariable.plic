@@ -1,0 +1,9 @@
+programme test {
+    entier a ;
+    entier b ;
+    a := 2 ;
+    b := 3 ;
+    //   non valide en plic0
+    a := b ;
+    ecrire a ;
+}

@@ -1,0 +1,4 @@
+programme progCorrect {
+   entier a ;
+   a := 2 ;
+}

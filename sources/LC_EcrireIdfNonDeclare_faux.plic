@@ -1,0 +1,6 @@
+programme ecrireIdf {
+    entier a ;
+    a := 2 ;
+    //  variable non déclarée
+    ecrire b ;
+}

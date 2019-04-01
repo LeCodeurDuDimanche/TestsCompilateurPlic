@@ -1,0 +1,4 @@
+programme addition {
+    entier op ;
+    op := 1 + faux ; //  on ne peut pas additionner un entier et un boolées
+}

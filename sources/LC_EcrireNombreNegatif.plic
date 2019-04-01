@@ -1,0 +1,10 @@
+programme test {
+    entier a ;
+    a := 1 ;
+    ecrire a ;
+    a := - 2 ;
+    ecrire a ;
+}
+
+//  1
+//  -2

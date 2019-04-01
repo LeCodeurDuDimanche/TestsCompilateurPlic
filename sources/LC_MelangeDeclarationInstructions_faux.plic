@@ -1,0 +1,10 @@
+programme melange {
+   //   declaration
+   entier a ;
+   //   affectation
+   a := 2 ;
+   //   declaration
+   entier b ;
+   //   affectation (erreur)
+   b := 3 ;
+}

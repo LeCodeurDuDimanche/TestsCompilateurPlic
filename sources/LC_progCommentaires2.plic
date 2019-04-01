@@ -1,0 +1,6 @@
+//   Rien
+programme t { //   Encore rien
+    entier a ;
+    a := 3 ; //   RAS
+} //   RAS
+//   RAS

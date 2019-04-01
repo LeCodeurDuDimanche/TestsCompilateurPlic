@@ -1,0 +1,5 @@
+programme test {
+	tableau [ 3 ] tab ;
+	tab [ 3 ] := 2 ;
+	tab [ 4 ] := 2 ;
+}
