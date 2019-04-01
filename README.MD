@@ -29,10 +29,14 @@ Lire le résultat d'un test :
 [PASSE|ERREUR|ERREUR_EXEC] [VALIDE|INVALIDE] nomFichier 
 
 PASSE 		: Le test passe
+
 ERREUR		: Le test ne passe pas (soit le fichier devrait compiler et ne compile pas, auquel cas l'erreur obtnue est affichée, soit le fichier compile mais ne devrait pas)
+
 ERREUR_EXEC	: Le test ne passe pas à l'éxécution, les résultats obtenu et attendu sont affichés
 
+
 VALIDE 		: Le fichier compile avec votre compilateur
+
 INVALIDE	: Le fichier ne compile pas avec votre compilateur
 
 A la fin, le nombre de tests échouant est affichés (de plus le nombre de fichier passant la compilation ou non sont affichés, pour info seulement)
