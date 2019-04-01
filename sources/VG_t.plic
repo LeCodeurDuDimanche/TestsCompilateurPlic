@@ -1,0 +1,7 @@
+programme t {
+
+	entier a ;
+	a := 3 ;
+	ecrire a ;
+} 
+//3

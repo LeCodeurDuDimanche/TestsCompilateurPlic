@@ -1,0 +1,8 @@
+programme addition {
+
+	entier e ;
+	e := 5 + 3 ;
+	ecrire e ;
+
+}
+//8

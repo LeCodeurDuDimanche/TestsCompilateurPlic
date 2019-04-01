@@ -1,0 +1,7 @@
+programme InferieurSansDroite {
+
+
+	ecrire 3 < ;
+
+}
+//ERREUR

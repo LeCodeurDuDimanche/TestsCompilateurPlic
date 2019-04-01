@@ -1,0 +1,7 @@
+programme AdditionSansDroite {
+
+
+	ecrire 3 + ;
+
+}
+//ERREUR

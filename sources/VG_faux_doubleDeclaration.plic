@@ -1,0 +1,7 @@
+programme fic {
+	entier e ;
+	entier e ;
+	e := 7 ;
+	// ecrire e;
+	ecrire e ;
+} 

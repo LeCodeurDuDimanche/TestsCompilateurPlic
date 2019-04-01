@@ -1,0 +1,9 @@
+programme fauxAddition {
+
+	entier e ;
+	e := 5 + 3 + 4 ;
+	ecrire e ;
+
+}
+//ERREUR
+//impossible d'additioner 3 nombres

@@ -1,0 +1,8 @@
+programme soustraction {
+
+	entier e ;
+	e := 5 - 3 ;
+	ecrire e ;
+
+}
+//2

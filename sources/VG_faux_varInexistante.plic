@@ -1,0 +1,7 @@
+programme fichier {
+	entier ent ;
+	entier e ;
+	//Ceci est un commentaire
+	ent := 5 ;
+	en := 7 ;
+} // Variable en inexistante

@@ -1,0 +1,8 @@
+programme expressionNegative {
+
+	entier a ;
+	a := 5 ;
+	ecrire - a ;
+
+}
+// -5 

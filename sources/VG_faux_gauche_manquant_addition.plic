@@ -1,0 +1,7 @@
+programme AdditionSansGauche {
+
+
+	ecrire + 3 ;
+
+}
+//ERREUR

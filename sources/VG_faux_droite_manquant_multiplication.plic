@@ -1,0 +1,7 @@
+programme MultiplicationSansDroite {
+
+
+	ecrire 3 * ;
+
+}
+//ERREUR

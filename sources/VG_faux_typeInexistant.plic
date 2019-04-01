@@ -1,0 +1,6 @@
+programme fauxTypeInexistant {
+
+	abc abc ;
+
+}
+//ERREUR

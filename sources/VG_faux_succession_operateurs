@@ -1,0 +1,7 @@
+programme successionOperateurs {
+
+	ecrire 3 + * 5 ;
+
+}
+// ERREUR
+// trop d'operateurs

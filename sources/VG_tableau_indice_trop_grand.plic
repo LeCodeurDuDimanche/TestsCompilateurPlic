@@ -1,0 +1,6 @@
+programme indiceTropGrand {
+
+	tableau [ 2 ] tab ;
+	tab [ 20 ] := 5 ; 
+}
+//ERREUR

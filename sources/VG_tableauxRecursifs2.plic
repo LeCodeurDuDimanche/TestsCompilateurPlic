@@ -1,0 +1,10 @@
+programme tableauxRecursifs {
+
+	tableau [ 8 ] tabUn ;
+	tabUn [ 0 ] := 1 ;
+	tabUn [ tabUn [ 0 ] ] := 2 ;
+	tabUn [ tabUn [ tabUn [ 0 ] ] ] := tabUn [ tabUn [ 0 ] ] ;
+	ecrire tabUn [ tabUn [ tabUn [ 0 ] ] ] ;
+
+}
+//2

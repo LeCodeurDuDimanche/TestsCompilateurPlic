@@ -1,0 +1,7 @@
+programme constanteEntiereNulle {
+
+	entier a ;
+	a := 0 ;
+
+}
+//RAS

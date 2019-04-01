@@ -1,0 +1,6 @@
+programme operateurInexistant {
+
+	ecrire 5 / 3 ;
+
+}
+//ERREUR operateur / inexistant

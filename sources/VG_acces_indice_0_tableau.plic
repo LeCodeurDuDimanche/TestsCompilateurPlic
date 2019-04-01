@@ -1,0 +1,6 @@
+programme accesIndiceZeroTableau {
+
+	tableau [ 3 ] tab ;
+	tab [ 0 ] := 5 ;
+	ecrire tab [ 0 ] ;
+}

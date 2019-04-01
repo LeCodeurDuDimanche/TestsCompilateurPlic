@@ -1,0 +1,11 @@
+programme long {
+	entier longueur ;
+	entier largeur ;
+	entier hauteur ;
+	longueur := 5 ;
+	hauteur := longueur ;
+	ecrire longueur ;
+	ecrire hauteur ;
+} 
+// 5
+// 5

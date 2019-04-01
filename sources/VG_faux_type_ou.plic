@@ -1,0 +1,8 @@
+programme fauxTypeAddition {
+
+	ecrire ( 5 > 3 ) ou 4 ;
+
+
+}
+//ERREUR
+//booleen attendu des deux cotes

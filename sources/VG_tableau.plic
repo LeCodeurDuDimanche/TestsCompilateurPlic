@@ -1,0 +1,13 @@
+programme tableauProg {
+
+tableau [ 5 ] tab ;
+entier indice ;
+indice := 3 ;
+tab [ indice ] := 4 ;
+ecrire tab [ indice ] ;
+tab [ tab [ indice ] ] := 2 ;
+ecrire tab [ tab [ indice ] ] ;
+
+}
+//4
+//2

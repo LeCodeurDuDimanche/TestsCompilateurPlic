@@ -1,0 +1,21 @@
+programme manger {
+
+	// Bien le bonjour, ceci est un commentaire et j'ai faim
+	entier prixMcFirst ;
+	entier prixSignature ;
+	entier prixBestOf ; 
+	prixMcFirst := 5 ;
+	prixSignature := 13 ;
+	prixBestOf := 7 ; //Commentaire
+	ecrire prixMcFirst ;
+	ecrire prixSignature ;
+	ecrire prixBestOf ;
+	//Voici les prix de certains menus
+	// ecrire prixMcFirst ;
+	prixMcFirst := 8 ;
+	ecrire prixMcFirst ;
+} 
+// 5
+// 13
+// 7
+// 8

@@ -1,0 +1,8 @@
+programme fauxTypeEt {
+
+	ecrire ( 5 > 3 ) et 4 ;
+
+
+}
+//ERREUR
+//booleen attendu des deux cotes

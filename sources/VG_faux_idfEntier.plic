@@ -1,0 +1,7 @@
+programme fauxidfEntier {
+
+	entier entier ;
+
+}
+//ERREUR
+// idf entier interdit

@@ -1,0 +1,8 @@
+programme fauxTypeInferieurEgal {
+
+	ecrire ( 5 > 3 ) <= 4 ;
+
+
+}
+//ERREUR
+//entier attendu des deux cotes

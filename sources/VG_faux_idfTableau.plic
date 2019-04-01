@@ -1,0 +1,7 @@
+programme fauxidfTableau {
+
+	entier tableau ;
+
+}
+//ERREUR
+//nom d'idf interdit

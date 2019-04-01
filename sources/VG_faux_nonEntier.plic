@@ -1,0 +1,6 @@
+programme nonEntier {
+
+	ecrire non 5 ;
+
+}
+//ERREUR
