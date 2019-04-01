@@ -1,0 +1,21 @@
+programme testUnaire {
+
+    entier a ;
+    entier b ;
+
+    a := 2 ;
+    b := 3 ;
+
+    ecrire non a = b ; //1
+    ecrire non ( a = b ) ou non ( non a = b ) ; //1
+    ecrire non a = b ou non b # a ; //1
+
+    ecrire non non non a # b ; //0
+
+    ecrire - ( a + b ) < 2 ; //1
+    ecrire - ( a - b ) ; //1
+    ecrire a - - ( b ) ; //5
+
+}
+
+//1 1 1 0 1 1 5

@@ -5,7 +5,7 @@ programme testUnaire {
 
     a := - 2 ;
     b [ 0 - - 1 ] := 1 ;
-    b [ 1 - - - - ( 1 - 2 ) ] := - 0 ;
+    b [ 1  - ( - ( - ( - ( 1 - 2 ) ) ) ) ] := - 0 ;
 
     ecrire non a > 0 ; //1
     ecrire - a > - 0 ; //1
@@ -15,6 +15,9 @@ programme testUnaire {
 
     ecrire non - a >= 2 ; //0
 
+    ecrire - ( a * 2 ) - 2 ; // 2
+    ecrire - ( a + 2 ) < 2 ; // 0
+
 }
 
-//1 1 1 0 1 0
+//1 1 1 0 1 0 2 0
