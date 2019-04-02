@@ -108,10 +108,10 @@ do
 	then
 		[ $verbose -eq 1 ] && echo "Évaluation de $(basename $outFile)"
 
-		input=$(cat $file|sed s/\\x00//g|grep //INPUT:|sed 's/INPUT://g'|sed 's/\/\/ *//g'|tr -d ' ')
-		[ $verbose -eq 1 ] && echo "Input : $input"
+		input=$(cat $file|sed s/\\x00//g|grep //INPUT:|sed 's/INPUT://g'|sed 's/\/\/ *//g'|sed 's/^ *//g'|sed 's/ *$//g')
+		[ $verbose -eq 1 -a -n "$input" ] && echo "Input : $input"
 
-		run=$(echo $input|timeout $timeout java -jar $mars nc $outFile)
+		run=$(echo -e $input\\n|tr -s ' ' '\n'|timeout $timeout java -jar $mars nc $outFile)
 		ret=$?
 		run=$(echo $run|tr -s '\n' ' ')
 		check=$(echo $(cat $file)|awk -F} '{print $NF}'|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
