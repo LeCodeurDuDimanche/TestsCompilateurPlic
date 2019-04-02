@@ -1,0 +1,14 @@
+programme p {
+
+	entier a ;
+	entier x ;
+	entier y ;
+	x := 10 ;
+	y := x + 1 ;
+	a := y + ( x + 1 ) ;
+	ecrire a ;
+
+
+}
+
+// 22

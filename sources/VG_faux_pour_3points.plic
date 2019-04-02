@@ -1,0 +1,9 @@
+programme PourTroisPoints {
+
+	entier x ;
+	pour x dans 1 ... 3 repeter {
+		ecrire x ;
+	}
+
+}
+// 2 points et non 3

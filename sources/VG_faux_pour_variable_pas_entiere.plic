@@ -1,0 +1,13 @@
+programme pourVarPasEntiere {
+
+	tableau [ 2 ] a ;
+	
+	pour a dans 1 .. 2 repeter {
+		ecrire 1 ;
+	}
+
+
+
+}
+// ERREUR 
+// a est de type tableau et non entier

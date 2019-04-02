@@ -1,0 +1,14 @@
+programme pourBornesDynamiques {
+
+	entier x ;
+	x := 4 ;
+	pour x dans 3 .. x + 1  repeter {
+	
+		ecrire x ;
+	}
+
+}
+
+//3
+//4
+//5
