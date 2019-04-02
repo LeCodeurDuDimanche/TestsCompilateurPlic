@@ -1,0 +1,9 @@
+programme pourIDFInconnu {
+
+	pour x dans 1 .. 2 repeter {
+		
+		ecrire x ;
+	
+	}
+
+}

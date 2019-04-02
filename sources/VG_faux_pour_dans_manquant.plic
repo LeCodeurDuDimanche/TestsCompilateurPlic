@@ -1,0 +1,8 @@
+programme pourDansManquant {
+
+	entier a ;
+	pour a 2 .. 3 repeter {
+		ecrire a ;
+	}
+
+}

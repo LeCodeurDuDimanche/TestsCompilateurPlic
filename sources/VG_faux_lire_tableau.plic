@@ -1,0 +1,9 @@
+programme fauxLireTableau {
+
+	tableau [ 5 ] a ;
+	lire a ;
+	ecrire a ;
+
+}
+// ERREUR
+// la variable doit etre de type entier

@@ -8,6 +8,5 @@ programme conditionAlors {
 		a := 2 ;
 		ecrire a ;
 	}
-
-
 }
+//3

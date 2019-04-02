@@ -1,0 +1,15 @@
+programme tantQueRepeterManquant {
+
+	entier a ;
+
+	a := 2 ;
+
+	tantque ( a = 1 ) {
+		
+		ecrire 1 ;
+	
+	}
+
+
+}
+//ERREUR repeter manquant

@@ -1,0 +1,14 @@
+programme pourExprPasEntiere {
+
+	tableau [ 3 ] tab ;
+	
+	entier x ;
+	
+	pour x dans tab .. 3 repeter {
+		ecrire 1 ;
+	}
+
+
+}
+//ERREUR
+// tab doit etre entier
