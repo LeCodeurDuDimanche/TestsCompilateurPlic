@@ -1,0 +1,40 @@
+programme test {
+
+    entier a ;
+    entier b ;
+
+    a := 1 ;
+    b := 2 ;
+
+    si ( a < b ) alors {
+        a := a + 1 ; // 2
+        si ( a <= b ) alors {
+            a := a + 1 ; // 3
+            si ( a < b ) alors {
+                ecrire a ;
+            }
+            sinon {
+                ecrire b ; //2
+            }
+            a := a + 1 ; // 4
+        }
+        sinon {
+            b := 0 ;
+            ecrire b ;
+        }
+
+        b := b + a ; // 6
+        si ( a < b ) alors {
+            ecrire a ; // 4
+            a := 0 ;
+        }
+
+        si ( 1 # 0 ) alors { ecrire 1 ; } sinon { ecrire 0 ; }
+        si ( ( 1 <= 1 ) et ( a < 0 ) ) alors { ecrire 0 ; } sinon { ecrire 2 ; }
+    }
+
+    ecrire a ; // 0
+    ecrire b ; // 6
+}
+
+//2 4 1 2 0 6
