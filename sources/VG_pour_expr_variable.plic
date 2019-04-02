@@ -1,0 +1,14 @@
+programme pourVarExpr {
+
+
+	entier a ;
+	entier b ;
+	entier c ;
+	b := 1 ;
+	c := 3 ;
+	pour a dans b .. c repeter {
+		ecrire a ;
+	}
+
+
+}
