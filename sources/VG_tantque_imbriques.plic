@@ -1,0 +1,40 @@
+programme tantQueImbriquees  {
+
+	entier a ;
+	entier b ;
+	entier c ;
+	
+	a := 3 ;
+	b := 6 ;
+	c := 9 ;
+	tantque ( a > 0 ) {
+	
+		tantque ( b > 3 ) {
+		
+			tantque ( c > 6 ) {
+			
+				ecrire c ;
+				c := c - 1 ;
+			
+			}
+			
+			ecrire b ; 
+			b := b - 1 ;
+		
+		}
+		
+		ecrire a ;
+		a := a - 1 ;
+	
+	}
+
+}
+//9
+//8
+//7
+//6
+//5
+//4
+//3
+//2
+//1
