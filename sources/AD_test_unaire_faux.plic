@@ -1,0 +1,6 @@
+programme testUnaire {
+
+    entier a ;
+
+    ecrire - a ;
+}
