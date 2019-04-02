@@ -1,0 +1,10 @@
+programme tantQueExprNonBooleenne {
+
+	tantque ( 1 + 1 ) {
+	
+		ecrire 1 ;
+	}
+
+}
+//ERREUR
+//1+1 n'est pas du type booleen

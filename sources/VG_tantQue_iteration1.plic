@@ -1,0 +1,14 @@
+programme tantQueIte {
+
+	entier a ;
+	a := 1 ;
+	tantque ( a < 4 ) {
+		ecrire a ;
+		a := a + 1 ;
+	}
+
+
+}
+//1
+//2
+//3
