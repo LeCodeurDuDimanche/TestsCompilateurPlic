@@ -54,7 +54,7 @@ do
 	then
 		help
 		exit 0
-	elif [ $# -ge 1 ] && [ $arg == --timeout -o $arg == -i ] 
+	elif [ $# -ge 1 ] && [ $arg == --timeout -o $arg == -i ]
 	then
 		timeout=$1
 		shift
@@ -118,7 +118,7 @@ do
 		[ $verbose -eq 1 ] && echo Attendu : $(echo $check|sed 's/\n//g')
 		[ $verbose -eq 1 ] && echo Obtenu : $run
 
-		if [ "$check" != "ERREUR" -o -n "$(echo $run|grep ERREUR:)" ] && [ "$check" == "ERREUR" -o -z "$(echo $run|grep ERREUR:)" ]
+		if [ "$check" == "ERREUR" -a -n "$(echo $run|grep ERREUR:)" ]
 		then
 			erreurCorrect=1
 		else
