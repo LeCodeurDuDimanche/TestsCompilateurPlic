@@ -127,15 +127,14 @@ do
 			erreurCorrect=0
 		fi
 
-		if ! diff <(echo $run) <(echo $check) >/dev/null && [ $erreurCorrect -ne 1 ]
-		then
-			 failed=$(($failed + 1))
-			 correct=ERREUR_EXEC
-		fi
 		if [ $ret -ne 0 ]
 		then
 			failed=$(($failed + 1))
 			correct=ERREUR_TIMEOUT
+		elif ! diff <(echo $run) <(echo $check) >/dev/null && [ $erreurCorrect -ne 1 ]
+		then
+			 failed=$(($failed + 1))
+			 correct=ERREUR_EXEC
 		fi
 	fi
 
