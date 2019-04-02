@@ -1,4 +1,4 @@
 programme inferieur {
 	ecrire 5 < 3 ;
 }
-// 0
+// 1

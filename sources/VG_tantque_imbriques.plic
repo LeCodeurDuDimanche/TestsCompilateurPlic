@@ -3,29 +3,29 @@ programme tantQueImbriquees  {
 	entier a ;
 	entier b ;
 	entier c ;
-
+	
 	a := 3 ;
 	b := 6 ;
 	c := 9 ;
 	tantque ( a > 0 ) repeter {
-
+	
 		tantque ( b > 3 ) repeter {
-
+		
 			tantque ( c > 6 ) repeter {
-
+			
 				ecrire c ;
 				c := c - 1 ;
-
+			
 			}
-
-			ecrire b ;
+			
+			ecrire b ; 
 			b := b - 1 ;
-
+		
 		}
-
+		
 		ecrire a ;
 		a := a - 1 ;
-
+	
 	}
 
 }

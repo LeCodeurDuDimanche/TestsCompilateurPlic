@@ -1,6 +1,6 @@
 programme tantQueExprNonBooleenne {
 
-	tantque ( 1 + 1 ) {
+	tantque ( 1 + 1 ) repeter {
 	
 		ecrire 1 ;
 	}

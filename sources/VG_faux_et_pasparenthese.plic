@@ -4,3 +4,4 @@ programme et {
 	entier b ;
 	ecrire  a >= 0 et b <= 0;
 }
+// ERREUR

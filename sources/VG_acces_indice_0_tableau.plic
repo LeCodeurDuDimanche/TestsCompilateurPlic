@@ -4,3 +4,4 @@ programme accesIndiceZeroTableau {
 	tab [ 0 ] := 5 ;
 	ecrire tab [ 0 ] ;
 }
+//5
