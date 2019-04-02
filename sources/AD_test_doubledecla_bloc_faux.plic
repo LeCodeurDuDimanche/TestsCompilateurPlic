@@ -1,0 +1,14 @@
+programme test {
+
+    entier a ;
+
+    a := 1 ;
+
+    si ( a > 1 ) alors {
+        entier a ;
+        
+        ecrire a ;
+    }
+
+    ecrire a ;
+}

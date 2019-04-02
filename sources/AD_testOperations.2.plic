@@ -9,7 +9,7 @@ programme testAddition {
     tab [ 0 ] := b - 1 ; // 2
     tab [ a ] := a + b ; // 4
     tab [ 2 ] := 5 + 6 ; // 11
-    tab [ 3 ] := - 2 ; //-2
+    tab [ 3 ] := - ( 2 ) ; //-2
     tab [ 4 ] := 2 + ( 4 - ( a * 2 ) ) ; //4
 
     ecrire a ;

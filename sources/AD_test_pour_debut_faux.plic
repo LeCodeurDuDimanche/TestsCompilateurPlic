@@ -1,0 +1,8 @@
+programme test {
+
+    entier a ;
+
+    pour a dans b .. 10 repeter {
+        ecrire 1 ;
+    }
+}
