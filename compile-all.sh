@@ -108,26 +108,26 @@ do
 	then
 		[ $verbose -eq 1 ] && echo "Évaluation de $(basename $outFile)"
 
-		input=$(cat $file|sed s/\\x00//g|grep //INPUT:|sed 's/INPUT://g'|sed 's/\/\/ *//g')
+		input=$(cat $file|sed s/\\x00//g|grep //INPUT:|sed 's/INPUT://g'|sed 's/\/\/ *//g'|tr -d ' ')
 		[ $verbose -eq 1 ] && echo "Input : $input"
 
-		run=$(echo $input|timeout $timeout java -jar $mars nc $outFile|sed 's/\n//g')
+		run=$(echo $input|timeout $timeout java -jar $mars nc $outFile)
 		ret=$?
-		check=$(cat $file|cut -d '}' -f $(($(grep -c '}' $file) + 1)) -z|sed s/\\x00//g|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
+		run=$(echo $run|tr -s '\n' ' ')
+		check=$(echo $(cat $file)|awk -F} '{print $NF}'|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
+
 
 		[ $verbose -eq 1 ] && echo Attendu : $check
 		[ $verbose -eq 1 ] && echo Obtenu : $run
 
-		if [ "$check" == "ERREUR" -a -n "$(echo $run|grep ERREUR:)" ]
+		if diff -w <(echo $check) <(echo "ERREUR") >/dev/null  && [ -n "$(echo $run|grep ^ERREUR:)" ]
 		then
 			erreurCorrect=1
 		else
 			erreurCorrect=0
 		fi
 
-
-
-		if [ "$run" != "$check" ] && [ $erreurCorrect -ne 1 ]
+		if ! diff <(echo $run) <(echo $check) >/dev/null && [ $erreurCorrect -ne 1 ]
 		then
 			 failed=$(($failed + 1))
 			 correct=ERREUR_EXEC
@@ -152,7 +152,7 @@ do
 			echo Attendu : $check
 			echo Obtenu : $run
 		fi
-	elif [ $correct != PASSE ]
+	elif [ "$correct" != PASSE ]
 	then
 		echo $correct $file
 	fi
