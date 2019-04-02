@@ -10,6 +10,8 @@ Pour que les scripts de test marchent correctement :
 - Ajouter en commentaires après le programme le résultat de l'éxécution s'il est censé
 compiler (ou ERREUR si le programme doit planter)
 
+- Ajouter en commentaire les inputs du programme, dans l'ordre, précédés de INPUT: (peuvent être répartis un peu partout)
+
 - Ça serait cool dans le nom ou et commentaire dans le fichier de dire pourquoi il ne
 devrait pas compiler (si c'est le cas)
 
@@ -25,8 +27,8 @@ options)
 - Les fichier mips sont générés dans le répertoire generatedMips/
 
 
-Lire le résultat d'un test : 
-[PASSE|ERREUR|ERREUR_EXEC] [VALIDE|INVALIDE] nomFichier 
+Lire le résultat d'un test :
+[PASSE|ERREUR|ERREUR_EXEC] [VALIDE|INVALIDE] nomFichier
 
 PASSE 		: Le test passe
 

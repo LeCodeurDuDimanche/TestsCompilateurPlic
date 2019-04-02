@@ -1,0 +1,15 @@
+programme test {
+
+    entier a ;
+    entier b ;
+
+    //INPUT: 4
+    lire a ;
+    //INPUT: -5
+    lire b ;
+
+    ecrire a + b ;
+    ecrire a - b ;
+    ecrire a < b ;
+}
+//-1 9 0

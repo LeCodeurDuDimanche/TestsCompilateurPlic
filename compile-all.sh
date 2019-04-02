@@ -98,8 +98,12 @@ do
 	if [ $correct == PASSE ] && [ $status == VALIDE ] && [ $test -eq 1 ] && [ $simple -eq 0 ]
 	then
 		[ $verbose -eq 1 ] && echo "Évaluation de $(basename $outFile)"
-		run=$(java -jar $mars nc $outFile)
-		check=$(cat $file|cut -d '}' -f 2 -z|sed s/\\x00//g|grep //|sed 's/\/\/ *//g')
+
+		input=$(cat $file|sed s/\\x00//g|grep //INPUT:|sed 's/INPUT://g'|sed 's/\/\/ *//g')
+		[ $verbose -eq 1 ] && echo "Input : $input"
+
+		run=$(echo $input|java -jar $mars nc $outFile)
+		check=$(cat $file|cut -d '}' -f 2 -z|sed s/\\x00//g|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
 
 		if [ "$check" != "ERREUR" -o -n "$(echo $run|grep ERREUR:)" ] && [ "$check" == "ERREUR" -o -z "$(echo $run|grep ERREUR:)" ]
 		then
