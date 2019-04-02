@@ -1,0 +1,12 @@
+programme conditionAlors {
+
+	entier a ;
+	a := 2 ;
+	si ( a = 2 ) alors {
+	
+		ecrire a ;
+	
+	}
+
+}
+//2

@@ -1,0 +1,11 @@
+programme conditionSinonAlors {
+
+
+	si ( 1 = 1 ) sinon {
+		ecrire 1 ;
+	} alors {
+		ecrire 2 ;
+	}
+}
+//ERREUR
+//alors et sinon inverses

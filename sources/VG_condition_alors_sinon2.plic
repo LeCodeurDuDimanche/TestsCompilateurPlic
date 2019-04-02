@@ -1,0 +1,13 @@
+programme conditionAlorsSinon {
+
+	entier a ;
+	a := 3 ;
+	si ( a = 2 ) alors {
+		ecrire a ;
+	} sinon {
+		a := 2 ;
+		ecrire a ;
+	}
+
+
+}

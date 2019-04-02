@@ -1,0 +1,11 @@
+programme conditionSinonManquant {
+
+	si ( 1 = 1 ) alors {
+		ecrire 1 ;
+	} {
+		ecrire 2 ;
+	}
+
+}
+//ERREUR 
+// mot clé sinon manquant
