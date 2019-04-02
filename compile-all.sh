@@ -111,11 +111,11 @@ do
 		input=$(cat $file|sed s/\\x00//g|grep //INPUT:|sed 's/INPUT://g'|sed 's/\/\/ *//g')
 		[ $verbose -eq 1 ] && echo "Input : $input"
 
-		run=$(echo $input|timeout $timeout java -jar $mars nc $outFile)
+		run=$(echo $input|timeout $timeout java -jar $mars nc $outFile|sed 's/\n//g')
 		ret=$?
-		check=$(cat $file|cut -d '}' -f 2 -z|sed s/\\x00//g|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
+		check=$(cat $file|cut -d '}' -f $(($(grep -c '}' $file) + 1)) -z|sed s/\\x00//g|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
 
-		[ $verbose -eq 1 ] && echo Attendu : $(echo $check|sed 's/\n//g')
+		[ $verbose -eq 1 ] && echo Attendu : $check
 		[ $verbose -eq 1 ] && echo Obtenu : $run
 
 		if [ "$check" == "ERREUR" -a -n "$(echo $run|grep ERREUR:)" ]
@@ -124,6 +124,8 @@ do
 		else
 			erreurCorrect=0
 		fi
+
+
 
 		if [ "$run" != "$check" ] && [ $erreurCorrect -ne 1 ]
 		then
