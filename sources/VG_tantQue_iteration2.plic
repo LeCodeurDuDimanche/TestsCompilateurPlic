@@ -2,7 +2,7 @@ programme tantQueIte {
 
 	entier a ;
 	a := 1 ;
-	tantque ( a > 4 ) {
+	tantque ( a > 4 ) repeter {
 		ecrire a ;
 		a := a + 1 ;
 	}
