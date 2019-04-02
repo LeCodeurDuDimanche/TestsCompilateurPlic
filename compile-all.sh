@@ -113,7 +113,7 @@ do
 
 		run=$(echo $input|timeout $timeout java -jar $mars nc $outFile)
 		ret=$?
-		check=$(cat $file|cut -d '}' -f -1 -z|sed s/\\x00//g|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
+		check=$(cat $file|cut -d '}' -f 1 -z|sed s/\\x00//g|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
 
 		[ $verbose -eq 1 ] && echo Attendu : $(echo $check|sed 's/\n//g')
 		[ $verbose -eq 1 ] && echo Obtenu : $run
