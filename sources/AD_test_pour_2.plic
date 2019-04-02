@@ -1,0 +1,30 @@
+programme test {
+    entier nbLignes ;
+    entier i ;
+    entier rang ;
+    entier nb ;
+    entier ligne ;
+
+    //INPUT: 5
+    lire nbLignes ;
+    pour ligne dans 1 .. nbLignes repeter {
+        i := ligne ;
+        rang := 1 ;
+        nb := 0 ;
+        pour i dans 1 .. nbLignes repeter {
+            si ( i >= ( nbLignes - ( - ( 1 ) + ligne ) ) ) alors {
+                nb := nb + rang ;
+            }
+            rang := 10 * rang ;
+        }
+
+        ecrire nb ;
+    }
+
+}
+
+//10000
+//11000
+//11100
+//11110
+//11111
