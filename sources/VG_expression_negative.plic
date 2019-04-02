@@ -2,7 +2,7 @@ programme expressionNegative {
 
 	entier a ;
 	a := 5 ;
-	ecrire - a ;
+	ecrire - ( a ) ;
 
 }
-// -5 
+// -5

@@ -1,6 +1,6 @@
 programme indiceNegatif {
 
 	tableau [ 2 ] tab ;
-	tab [ - 2 ] := 5 ; 
+	tab [ - ( 2 ) ] := 5 ; 
 }
 //ERREUR
