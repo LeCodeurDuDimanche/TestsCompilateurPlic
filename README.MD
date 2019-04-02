@@ -28,13 +28,17 @@ options)
 
 
 Lire le résultat d'un test :
-[PASSE|ERREUR|ERREUR_EXEC] [VALIDE|INVALIDE] nomFichier
+[PASSE|ERREUR|ERREUR_EXEC|ERREUR_TIMEOUT] [VALIDE|INVALIDE] nomFichier
 
 PASSE 		: Le test passe
 
 ERREUR		: Le test ne passe pas (soit le fichier devrait compiler et ne compile pas, auquel cas l'erreur obtnue est affichée, soit le fichier compile mais ne devrait pas)
 
 ERREUR_EXEC	: Le test ne passe pas à l'éxécution, les résultats obtenu et attendu sont affichés
+
+ERREUR_TIMEOUT  : Le test ne passe pas à l'éxécution car le code génère une boucle infinie non 
+prévue
+
 
 
 VALIDE 		: Le fichier compile avec votre compilateur

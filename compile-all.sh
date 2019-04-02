@@ -10,6 +10,7 @@ function help() {
 	echo -e "\t--test, -t    : Mode test, affiche les fichiers invalides et éxécute les fichiers valides"
 	echo -e "\t--simple, -s  : N'éxécute pas le mips généré"
 	echo -e "\t--verbose, -v : Affiche ce qu'il est en train de faire"
+	echo -e "\t--timeout, -i val : Set le timeout de l'éxécution"
 	echo -e "\t--help, -h    : Affiche cette aide"
 	echo
 	echo "Constantes à modifier dans le script"
@@ -30,6 +31,7 @@ test=0
 quiet=0
 verbose=0
 simple=0
+timeout=5
 
 while [ $# -gt 0 ]
 do
@@ -52,6 +54,13 @@ do
 	then
 		help
 		exit 0
+	elif [ $# -ge 1 ] && [ $arg == --timeout -o $arg == -i ] 
+	then
+		timeout=$1
+		shift
+	else
+		echo "Option inconnue : $arg"
+		exit 1
 	fi
 done
 
@@ -102,8 +111,12 @@ do
 		input=$(cat $file|sed s/\\x00//g|grep //INPUT:|sed 's/INPUT://g'|sed 's/\/\/ *//g')
 		[ $verbose -eq 1 ] && echo "Input : $input"
 
-		run=$(echo $input|java -jar $mars nc $outFile)
+		run=$(echo $input|timeout $timeout java -jar $mars nc $outFile)
+		ret=$?
 		check=$(cat $file|cut -d '}' -f 2 -z|sed s/\\x00//g|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
+
+		[ $verbose -eq 1 ] && echo Attendu : $(echo $check|sed 's/\n//g')
+		[ $verbose -eq 1 ] && echo Obtenu : $run
 
 		if [ "$check" != "ERREUR" -o -n "$(echo $run|grep ERREUR:)" ] && [ "$check" == "ERREUR" -o -z "$(echo $run|grep ERREUR:)" ]
 		then
@@ -116,6 +129,11 @@ do
 		then
 			 failed=$(($failed + 1))
 			 correct=ERREUR_EXEC
+		fi
+		if [ $ret -ne 0 ]
+		then
+			failed=$(($failed + 1))
+			correct=ERREUR_TIMEOUT
 		fi
 	fi
 
