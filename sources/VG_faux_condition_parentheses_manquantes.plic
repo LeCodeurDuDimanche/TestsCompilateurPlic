@@ -1,0 +1,12 @@
+programme conditionParenthesesManquantes {
+
+	si 1 + 1 = 2 alors {
+		ecrire 2 ;
+	} sinon {
+		ecrire 3 ;
+	}
+
+
+}
+// ERREUR
+//les parentheses apres le si sont manquantes

@@ -1,0 +1,51 @@
+programme conditionImbriquees {
+
+
+	si ( 1 = 1 ) alors {
+	
+		ecrire 1 ;
+		
+		si ( 2 = 2 ) alors {
+			
+			ecrire 2 ;
+			
+			si ( 3 = 1 ) alors {
+				
+				ecrire 33 ;
+			
+				si ( 4 = 4 ) alors {
+					
+					ecrire 44 ;
+				
+				}
+			
+			} sinon {
+				
+				ecrire 3 ;
+	
+				si ( 44 = 4 ) alors {
+				
+					ecrire 44 ; 
+					
+				} sinon {
+				
+					ecrire 4 ; 
+				
+				}
+			
+			}
+		
+		} sinon {
+		
+			ecrire 22 ;
+		
+		} 
+	
+	}
+
+}
+
+//1
+//2
+//3
+//4

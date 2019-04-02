@@ -1,0 +1,7 @@
+programme lireEntier {
+
+	entier a ;
+	lire a ;
+	ecrire a ;
+
+}

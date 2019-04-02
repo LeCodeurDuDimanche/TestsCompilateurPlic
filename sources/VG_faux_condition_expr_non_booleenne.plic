@@ -1,0 +1,15 @@
+programme conditionExprNonBooleenne {
+
+
+	entier a ;
+	
+	a := 3 ;
+	
+	si ( a + 3 ) alors {
+		ecrire a ;
+	} sinon {
+		ecrire a + 3 ;
+	}
+}
+//ERREUR 
+// a + 3 n'est pas booleen

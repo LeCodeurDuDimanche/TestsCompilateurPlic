@@ -1,0 +1,13 @@
+programme conditionAlorsManquant {
+
+	si ( ( 1 + 1 ) = 2 ) {
+		ecrire 1 ;
+	} sinon {
+		ecrire 2 ; 
+	} 
+
+
+
+}
+// ERREUR
+// il manque le alors
