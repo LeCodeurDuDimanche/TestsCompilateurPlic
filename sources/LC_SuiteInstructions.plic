@@ -4,24 +4,23 @@ programme test {
     entier a ;
     entier b ;
     entier tmp ; //   variable temporaire
-    
+
     //   initialisations
     a := 1 ; b := 2 ;
-    
+
     //   écriture
     ecrire a ;
     ecrire b ;
-    
+
     //   échange
     tmp := a ;
     a := b ;
     b := tmp ;
-    
+
     //   écriture
     ecrire a ;
     ecrire b ;
 }
-//   commentaire à la fin
 //  1
 //  2
 //  2

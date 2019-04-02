@@ -7,3 +7,4 @@ programme test {
     a := b ;
     ecrire a ;
 }
+//3

@@ -16,7 +16,7 @@ programme testUnaire {
     ecrire non - ( a ) >= 2 ; //0
 
     ecrire - ( a * 2 ) - 2 ; // 2
-    ecrire - ( a + 2 ) < 2 ; // 0
+    ecrire - ( a - 2 ) < 2 ; // 0
 
 }
 

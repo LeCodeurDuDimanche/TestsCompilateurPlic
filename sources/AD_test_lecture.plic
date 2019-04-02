@@ -5,7 +5,7 @@ programme test {
 
     //INPUT: 4
     lire a ;
-    //INPUT: -5
+    //INPUT: 5
     lire b ;
 
     ecrire a + b ;

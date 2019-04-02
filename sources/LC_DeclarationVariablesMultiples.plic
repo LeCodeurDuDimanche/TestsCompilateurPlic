@@ -5,8 +5,8 @@ programme test {
     entier d ;
     a := 3 ;
     ecrire a ;
-    ecrire b ; //  le résultat peut être différent 
+    ecrire b ; //  le résultat peut être différent
 }
 
 //  3
-//  0 (sur mon interpréteur Mars)
+//  0 
