@@ -1,0 +1,14 @@
+programme test {
+    entier a ;
+
+    tantque ( 0 # 0 ) repeter {
+        ecrire 0 ;
+    }
+
+    pour a dans 1 .. 0 repeter {
+        ecrire 0 ;
+    }
+
+    si ( 0 # 0 ) alors { ecrire 0 ; }
+
+}
