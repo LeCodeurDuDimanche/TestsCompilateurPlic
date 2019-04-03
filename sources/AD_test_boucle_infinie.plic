@@ -1,0 +1,9 @@
+programme infinie {
+
+    entier a ;
+
+    tantque ( 1 = 1 ) repeter {
+        a := 1 ;
+    }
+}
+//TIMEOUT
