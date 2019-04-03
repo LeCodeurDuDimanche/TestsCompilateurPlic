@@ -114,7 +114,7 @@ do
 		run=$(echo -e $input\\n|tr -s ' ' '\n'|timeout $timeout java -jar $mars nc $outFile)
 		ret=$?
 		run=$(echo $run|tr -s '\n\r' ' ')
-		check=$(echo $(cat $file)|awk -F} '{print $NF}'|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
+		check=$(echo $(cat $file)|cut -d '}' -f $(($(grep -o '}' $file|wc -w) + 1))|grep //|grep -v INPUT:|sed 's/\/\/ *//g')
 
 
 		[ $verbose -eq 1 ] && echo Attendu : $check
