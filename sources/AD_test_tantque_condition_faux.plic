@@ -1,0 +1,9 @@
+programme tantQueExprNonBooleenne {
+
+	tantque ( a > 0 ) repeter {
+
+		ecrire 1 ;
+	}
+
+}
+//ERREUR
