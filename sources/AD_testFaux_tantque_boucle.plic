@@ -1,0 +1,9 @@
+//Programme de test en PLIC v0
+programme testun {
+
+	tantque ( 1 = 1 ) repeter {
+		a := 1 ; //erreur dans bloc
+	}
+
+}
+//Fin du programme

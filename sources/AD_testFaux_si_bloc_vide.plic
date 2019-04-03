@@ -1,0 +1,9 @@
+//Programme de test en PLIC v0
+programme testun {
+	entier a ;
+
+	si ( a > 1 )
+	alors { } //Bloc vide
+
+}
+//Fin du programme

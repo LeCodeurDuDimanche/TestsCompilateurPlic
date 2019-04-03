@@ -1,0 +1,9 @@
+//Programme de test en PLIC v0
+programme testun {
+
+tableau [ 2 ] tb ;
+
+	tb := 1 ; //affectation invalide
+
+}
+//Fin du programme

@@ -1,0 +1,5 @@
+programme test {
+    tableau [ 1 ] tab ;
+
+    lire tab ; // Mauvais type
+}

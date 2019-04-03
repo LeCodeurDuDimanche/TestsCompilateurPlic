@@ -1,0 +1,4 @@
+programme test {
+
+    lire a ; // Non declare
+}

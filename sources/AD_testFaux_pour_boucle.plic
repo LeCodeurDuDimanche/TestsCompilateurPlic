@@ -1,0 +1,10 @@
+//Programme de test en PLIC v0
+programme testun {
+	entier a ;
+
+	pour a dans 1 .. 2 repeter {
+		b := 1 ; //erreur dans bloc
+	}
+
+}
+//Fin du programme

@@ -1,0 +1,11 @@
+//Programme de test en PLIC v0
+programme testun {
+	entier a ;
+
+	si ( b > 1 ) // b non declare
+	alors {
+		ecrire a ;
+	}
+
+}
+//Fin du programme
