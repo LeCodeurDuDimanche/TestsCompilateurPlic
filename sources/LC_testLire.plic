@@ -1,0 +1,19 @@
+programme test {
+   entier a ;
+   entier b ;
+   lire a ; // INPUT: 2
+   ecrire a ; // 2
+   lire b ; // INPUT: 3
+   ecrire b ; // 3
+   ecrire a + b ;
+   ecrire - ( a + b ) ;
+   ecrire - ( a ) - b ;
+   ecrire - ( a - b ) ;
+   ecrire - ( a ) + b ;
+}
+// 2
+// 3
+// -5
+// 1
+// 1
+// 1

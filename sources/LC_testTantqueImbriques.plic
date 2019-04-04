@@ -1,0 +1,24 @@
+programme tantQueImbriques {
+    
+    entier i ;
+    entier j ;
+    
+    i := 0 ;
+    j := 2 ;
+    tantque ( i < j ) repeter {
+        entier k ;
+        
+        k := 2 ;
+        tantque ( k > i ) repeter {
+            ecrire k ;
+            ecrire i ;
+            k := k - 1 ;
+        }
+        
+        i := i + 1 ;
+          
+    }   
+}
+// 2 0 1 0 2 1 
+
+
