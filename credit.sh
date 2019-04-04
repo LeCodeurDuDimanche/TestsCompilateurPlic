@@ -13,11 +13,18 @@ do
 	alias=$(echo $noms|tr -s '-' '\n'|grep $nom|cut -d '=' -f 2)
 	num=$(echo $num|cut -d '_' -f 2)
 	
+	faux=$(ls sources/|grep $nom|grep -c --ignore-case faux) 
 	if [ $num -gt 1 ] 
 	then 
-		testEcrit='tests écrits'
+		s=s
 	else 
-		testEcrit='test écrit'
+		s=
 	fi
-	printf '%-20s: %d %s\n' "$alias" "$num" "$testEcrit"
+	printf "%-20s: %d test%s écrit%s, donc %d test%s d'erreur\n" "$alias" "$num" "$s" "$s" "$faux" "$s"
 done
+
+num=$(ls sources/*.plic|wc -l)
+faux=$(ls sources/*.plic|grep -c --ignore-case faux)
+
+echo
+echo "Au total $num tests écrits dont $faux tests d'erreur"
