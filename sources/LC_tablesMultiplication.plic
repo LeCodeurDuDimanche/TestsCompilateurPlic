@@ -1,7 +1,8 @@
 programme tables {
     entier n ;
     entier i ;
-    lire n ; //INPUT: 4
+    lire n ;
+    //INPUT: 4
     pour i dans 0 .. 10 repeter {
         ecrire n * i ;
     }
