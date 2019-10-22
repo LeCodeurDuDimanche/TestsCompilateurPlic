@@ -1,7 +1,7 @@
 #!/bin/bash
 noms='-AD=Adrien Duval
 -LC=Luc Cheng
--MG=Martine Gautier
+-MG=Martine Gautier [Enseignante]
 -OL=Oscar Leclerc
 -VC=Vincent Choquert
 -VG=Vanessa Geny

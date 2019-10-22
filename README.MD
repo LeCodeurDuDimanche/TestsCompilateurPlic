@@ -1,3 +1,14 @@
+# Tests automatisés pour un compilateur
+
+Le compilateur compile du PLIC, langage inventé pour le projet, vers de l'assembleur MIPS.
+
+Les fichiers de tests sont des fichiers PLIC valides ou invalides, écrits par plusieurs élèves de la classe (lancer `./credits.sh` pour plus d'informations).
+
+Une version du compilateur que j'avais produit se trouve dans le dépôt afin de pouvoir faire marcher les tests.
+
+
+## Utilisation
+
 Fichiers plics et scripts de test
 ---------------------------------
 
@@ -36,7 +47,7 @@ ERREUR		: Le test ne passe pas (soit le fichier devrait compiler et ne compile p
 
 ERREUR_EXEC	: Le test ne passe pas à l'éxécution, les résultats obtenu et attendu sont affichés
 
-ERREUR_TIMEOUT  : Le test ne passe pas à l'éxécution car le code génère une boucle infinie non 
+ERREUR_TIMEOUT  : Le test ne passe pas à l'éxécution car le code génère une boucle infinie non
 prévue
 
 
